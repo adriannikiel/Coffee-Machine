@@ -1,31 +1,48 @@
 package machine;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class CoffeeMachine {
+
+    public static final int WATER_FOR_ONE_COFFEE = 200;
+    public static final int MILK_FOR_ONE_COFFEE = 50;
+    public static final int BEANS_FOR_ONE_COFFEE = 15;
+
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        final int WATER_FOR_ONE_COFFEE = 200;
-        final int MILK_FOR_ONE_COFFEE = 50;
-        final int BEANS_FOR_ONE_COFFEE = 15;
+        System.out.println("Write how many ml of water the coffee machine has:");
+        int water = scanner.nextInt();
 
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write how many ml of milk the coffee machine has: ");
+        int milk = scanner.nextInt();
+
+        System.out.println("Write how many grams of coffee beans the coffee machine has:");
+        int beans = scanner.nextInt();
 
         System.out.println("Write how many cups of coffee you will need:");
         int coffees = scanner.nextInt();
 
-        System.out.printf("For %d cups of coffee you will need:\n", coffees);
-        System.out.println(coffees * WATER_FOR_ONE_COFFEE + " ml of water");
-        System.out.println(coffees * MILK_FOR_ONE_COFFEE + " ml of milk");
-        System.out.println(coffees * BEANS_FOR_ONE_COFFEE + " g of coffee beans");
+        int maxCoffee = countMaxAvailableCoffees(water, milk, beans);
 
-       /* System.out.println("Starting to make a coffee");
-        System.out.println("Grinding coffee beans");
-        System.out.println("Boiling water");
-        System.out.println("Mixing boiled water with crushed coffee beans");
-        System.out.println("Pouring coffee into the cup");
-        System.out.println("Pouring some milk into the cup");
-        System.out.println("Coffee is ready!");*/
+        if (coffees == maxCoffee) {
+            System.out.println("Yes, I can make that amount of coffee");
+        } else if (coffees > maxCoffee) {
+            System.out.printf("No, I can make only %d cup(s) of coffee", maxCoffee);
+        } else {
+            System.out.printf("Yes, I can make that amount of coffee (and even %d more than that)", maxCoffee - coffees);
+        }
 
+    }
+
+    private static int countMaxAvailableCoffees(int water, int milk, int beans) {
+        Integer[] maxCoffeeByIngredient = new Integer[3];
+
+        maxCoffeeByIngredient[0] = water / WATER_FOR_ONE_COFFEE;
+        maxCoffeeByIngredient[1] = milk / MILK_FOR_ONE_COFFEE;
+        maxCoffeeByIngredient[2] = beans / BEANS_FOR_ONE_COFFEE;
+
+        return Collections.min(List.of(maxCoffeeByIngredient));
     }
 }
