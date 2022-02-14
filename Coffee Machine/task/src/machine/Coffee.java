@@ -31,34 +31,19 @@ public abstract class Coffee {
 }
 
 class Espresso extends Coffee {
-
     public Espresso() {
-        this(250, 0, 16, 4);
-    }
-
-    private Espresso(int water, int milk, int beans, int price) {
-        super(water, milk, beans, price);
+        super(250, 0, 16, 4);
     }
 }
 
 class Latte extends Coffee {
-
     public Latte() {
-        this(350, 75, 20, 7);
-    }
-
-    private Latte(int water, int milk, int beans, int price) {
-        super(water, milk, beans, price);
+        super(350, 75, 20, 7);
     }
 }
 
 class Cappuccino extends Coffee {
-
     public Cappuccino() {
-        this(200, 100, 12, 6);
-    }
-
-    private Cappuccino(int water, int milk, int beans, int price) {
-        super(water, milk, beans, price);
+        super(200, 100, 12, 6);
     }
 }
