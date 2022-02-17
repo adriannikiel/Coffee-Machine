@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/204875/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 15 Feb 2022 01:34:34 UTC
+update_date: Wed, 16 Feb 2022 23:28:22 UTC
 stages:
 - id: 175
   step: 5329
@@ -44,12 +44,12 @@ topics:
     theory_id: 3518
   - title: Comments
     theory_id: 3520
+  - title: Scanning the input
+    theory_id: 9055
   - title: Coding style conventions
     theory_id: 12411
   - title: Naming variables
     theory_id: 3513
-  - title: Scanning the input
-    theory_id: 9055
   - title: Arithmetic operations
     theory_id: 3519
   - title: Integer types and operations
@@ -78,10 +78,10 @@ topics:
     theory_id: 10996
   - title: Ternary operator
     theory_id: 3506
-  - title: The for-loop
-    theory_id: 3505
   - title: The while and do-while loops
     theory_id: 3498
+  - title: The for-loop
+    theory_id: 3505
   - title: Branching statements
     theory_id: 3507
   - title: Switch statement
@@ -101,8 +101,6 @@ topics:
     theory_id: 3532
   - title: Type casting
     theory_id: 3510
-  - title: Introduction to OOP
-    theory_id: 3614
   - title: Calling a method
     theory_id: 10973
   - title: Declaring a method
@@ -115,18 +113,20 @@ topics:
     theory_id: 5035
   - title: Array
     theory_id: 3511
-  - title: Iterating over arrays
-    theory_id: 3602
   - title: Arrays as parameters
     theory_id: 3594
+  - title: Iterating over arrays
+    theory_id: 3602
   - title: Final variables
     theory_id: 7427
+  - title: Introduction to OOP
+    theory_id: 3614
   - title: Defining classes
     theory_id: 3618
-  - title: Constructor
-    theory_id: 3535
   - title: Instance methods
     theory_id: 3495
+  - title: Constructor
+    theory_id: 3535
   - title: Objects
     theory_id: 4727
   - title: Static members
